@@ -15,6 +15,16 @@ def clear():       #to clear the text field of the game
     b7["text"]=""
     b8["text"]=""
     b9["text"]=""
+    b1["bg"]="white"
+    b2["bg"]="white"
+    b3["bg"]="white"
+    b4["bg"]="white"
+    b5["bg"]="white"
+    b6["bg"]="white"
+    b7["bg"]="white"
+    b8["bg"]="white"
+    b9["bg"]="white"
+    c=1
     l["text"]="well played"
 def function(b):
     global c
@@ -24,8 +34,12 @@ def function(b):
         c += 1
         if c%2==0:
             b["text"]="O"
+            b['bg']="black"
+            b['fg']="white"
         else:
             b["text"]="X"
+            b['bg']="black"
+            b['fg']="white"
     if(b1["text"]=='O' and b2["text"]=='O' and b3["text"]=='O'):
         message="player1 is winner"
     elif b1["text"]=='X' and b2["text"]=='X' and b3["text"]=='X':
@@ -67,7 +81,7 @@ def function(b):
         b.grid(row=3,column=1)
     if message=="" and c>9:
         l = Label(window, text=message)
-        c=0
+        c=1
         l.grid(row=3, column=0)
         clear()
 
